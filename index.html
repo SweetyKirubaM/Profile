@@ -7,7 +7,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e9173d;
+            background-color: cyan; /* Set the background color to cyan */
         }
 
         header {
@@ -15,22 +15,30 @@
             color: #fff;
             text-align: center;
             padding: 2rem 0;
-            position: relative; /* Add this */
+            display: flex;
+            justify-content: flex-end; /* Align the content to the right */
+            align-items: center; /* Center the content vertically */
+            position: relative;
+        }
+
+        .header-content {
+            text-align: left; /* Align the text to the left */
+            margin-right: 120px; /* Add space on the right to fit the image */
         }
 
         .header-content h1 {
             font-size: 2.5rem;
         }
 
-        /* Add styles for the round profile picture */
         .profile-picture {
-            width: 100px; /* Adjust the size as needed */
+            width: 100px;
             height: 100px;
-            border-radius: 75%; /* Create a circular shape */
-            object-fit: cover; /* To ensure the image fills the circular area */
-            position: absolute; /* Add this */
-            top: 75px; /* Adjust top position as needed */
-            left: 75px; /* Adjust left position as needed */
+            border-radius: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%; /* Center vertically */
+            right: 20px; /* Adjust space from the right */
+            transform: translateY(-50%); /* Adjust for exact vertical centering */
         }
 
         nav {
@@ -94,21 +102,19 @@
 <body>
     <header>
         <div class="header-content">
-            <!-- Add your profile picture here -->
-            <img src="./sweety kiruba M.jpeg" alt="Your Profile Picture" class="profile-picture">
             <h1>SWEETY KIRUBA M</h1>
             <p>Assistant Professor</p>
         </div>
+        <img src="./sweety kiruba M.jpeg" alt="Your Profile Picture" class="profile-picture">
     </header>
 
     <nav>
         <ul>
-            <li><a href="#about">About </a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Subjects Undertaken</a></li>
             <li><a href="#projects">Projects</a></li>
-           <li><a href="#resume">Resume</a></li>
-        
+            <li><a href="#workshops">Workshops Attended</a></li>
         </ul>
     </nav>
 
@@ -117,30 +123,26 @@
             <h2>About</h2>
             <p>Around 10+ Years of teaching experience that includes training students on various
                 programming languages and various Core Computer science and Engineering platforms.</p>
-         </div>
+        </div>
     </section>
 
     <section id="education">
         <div class="section-content">
             <h2>Education</h2>
             <p>MCA., M.Phil., (Ph.D)</p>
-            
-            
         </div>
     </section>
 
     <section id="skills">
         <div class="section-content">
-           <h2>Subjects Undertaken:</h2>
+            <h2>Subjects Undertaken:</h2>
             <ul>
-            <li> Database Management Systems</li>
-            <li> Data Structures</li>
-            <li> Syatem Software and Operating Systems</li>
-            <li> Data warehousing and Data Mining</li>
-            <li> Software Project Management</li>
-
+                <li>Database Management Systems</li>
+                <li>Data Structures</li>
+                <li>System Software and Operating Systems</li>
+                <li>Data Warehousing and Data Mining</li>
+                <li>Software Project Management</li>
             </ul>
-            
         </div>
     </section>
 
@@ -148,40 +150,34 @@
         <div class="section-content">
             <h2>Administrative Works</h2>
             <ul>
-                Acting as a coordinator in department NBA criteria 3.
-                Acting as an active member in department ISO/NAAC/NIRF committees.
-                Acting as department Academic Curriculum Committee member.
-                Acting as a Project Guide for B.Sc students.
-                Acting as the member in Disciplinary Committee.
-                Acting as mentor for NPTEL online certification
-            </ul> 
-           </div>
-       
-    </section>
-    <section id="projects">
-        <div class="section-content">
-            <h2>WORKSHOPS ATTENDED </h2>
-            <ul>
-                <l1>a. Participated workshop on “ Neural Networks and Fuzzy Logic Systems” at Sasurie College of
-Engineering, Vijayamangalam, Tirupur District on 28.03.2008<br></l1>
-                <l2>b. Participated Faculty Development Workshop on “Scientific Teaching Model and Knowledge
-Management” at Sasurie College of Engineering, Vijayamangalam, Tirupur District on
-06.06.2009</l2>
-            </ul> 
-           </div>
-       
+                <li>Acting as a coordinator in department NBA criteria 3.</li>
+                <li>Acting as an active member in department ISO/NAAC/NIRF committees.</li>
+                <li>Acting as department Academic Curriculum Committee member.</li>
+                <li>Acting as a Project Guide for B.Sc students.</li>
+                <li>Acting as the member in Disciplinary Committee.</li>
+                <li>Acting as mentor for NPTEL online certification.</li>
+            </ul>
+        </div>
     </section>
 
-   <!--<section id="resume">
-    
+    <section id="workshops">
+        <div class="section-content">
+            <h2>WORKSHOPS ATTENDED</h2>
+            <ul>
+                <li>Participated workshop on “Neural Networks and Fuzzy Logic Systems” at Sasurie College of Engineering, Vijayamangalam, Tirupur District on 28.03.2008</li>
+                <li>Participated Faculty Development Workshop on “Scientific Teaching Model and Knowledge Management” at Sasurie College of Engineering, Vijayamangalam, Tirupur District on 06.06.2009</li>
+            </ul>
+        </div>
+    </section>
+
+    <!--<section id="resume">
         <div class="section-content">
             <center>
-            <h2>Resume</h2>
-            <a href="./Name list  for IBM SkillsBuild.pdf" target="_blank" class="download-button">Download CV</a>
-        </center>
+                <h2>Resume</h2>
+                <a href="./Name list for IBM SkillsBuild.pdf" target="_blank" class="download-button">Download CV</a>
+            </center>
         </div>
-        
-    </section>--> 
+    </section>-->
 
     <footer>
         <p>&copy; 2024 Sweety Kiruba M</p>
