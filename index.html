@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweety Kiruba M</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: cyan; /* Set the background color to cyan */
+            background-color: rgb(0, 183, 255); /* Set the background color to cyan */
         }
 
         header {
-            background-color: #c4e909;
-            color: #fff;
+            background-color: #09e979;
+            color: #2618a1;
             text-align: center;
             padding: 2rem 0;
             display: flex;
@@ -40,6 +43,10 @@
             top: 50%; /* Center vertically */
             transform: translateY(-50%); /* Adjust for exact vertical centering */
         }
+        .footer-content {
+            text-align: center; /* Center the text horizontally */
+            padding-right: 120px; /* Space for the profile picture */
+        }
 
         nav {
             background-color: #333;
@@ -63,7 +70,7 @@
         }
 
         .section-content {
-            background-color: #fff;
+            background-color: #bd81ba;
             padding: 2rem;
             margin: 1rem;
             border-radius: 20px;
@@ -89,13 +96,112 @@
         footer {
             text-align: center;
             padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
+            background-color: #330d92;
+            color: #ebeaea;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
         ul {
             list-style-type: disc;
             padding-left: 20px;
+        }
+
+        /* Animating the programming skills */
+        .skill-list li {
+            opacity: 0;  /* Initially hidden */
+            transform: translateX(-50px); /* Start off-screen */
+            animation: fadeIn 0.8s forwards; /* Fade in with animation */
+        }
+
+        /* Add delays to each list item */
+        .skill-list li:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .skill-list li:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .skill-list li:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        .skill-list li:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .skill-list li:nth-child(5) {
+            animation-delay: 1.5s;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Fade in to full visibility */
+                transform: translateX(0); /* Move into the viewport */
+            }
+        }
+
+        /* Animation for Subjects Undertaken section */
+        .subject-list li {
+            opacity: 0;
+            transform: translateY(30px); /* Initially off-screen */
+            animation: subjectFadeIn 1s forwards;
+        }
+
+        /* Add delay to each subject list item */
+        .subject-list li:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .subject-list li:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .subject-list li:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        .subject-list li:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .subject-list li:nth-child(5) {
+            animation-delay: 1.5s;
+        }
+
+        /* Keyframes for the subject animation */
+        @keyframes subjectFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Bring into the viewport */
+            }
+        }
+
+        .hidden {
+            display: none; /* Initially hide the section */
+        }
+
+        /* Contact section styles */
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact a {
+            margin: 0 10px;
+            color: #066e17;
+            text-decoration: none;
+        }
+
+        .contact i {
+            font-size: 1.5rem;
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -113,8 +219,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#subjects">Subjects Undertaken</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#subjects" id="subjects-link">Subjects Undertaken</a></li>
+            <li><a href="#projects">Administrative Works</a></li>
             <li><a href="#workshops">Workshops Attended</a></li>
         </ul>
     </nav>
@@ -137,19 +243,20 @@
     <section id="skills">
         <div class="section-content">
             <h2>Programming Skills:</h2>
-            <ul>
-                <li>C,C++,Java</li>
+            <ul class="skill-list">
+                <li>C, C++, Java</li>
                 <li>Python</li>
-                <li>HTML,CSS,JS</li>
+                <li>HTML, CSS, JS</li>
                 <li>Visual Basic</li>
                 <li>Oracle, SQL Server</li>
             </ul>
         </div>
     </section>
-    <section id="skills">
+
+    <section id="subjects" >
         <div class="section-content">
             <h2>Subjects Undertaken:</h2>
-            <ul>
+            <ul class="subject-list">
                 <li>Database Management Systems</li>
                 <li>Data Structures</li>
                 <li>System Software and Operating Systems</li>
@@ -164,11 +271,11 @@
             <h2>Administrative Works</h2>
             <ul>
                 <li>Acting as a coordinator in department NBA criteria 3.</li>
-                <li>Acting as an active member in department ISO/NAAC/NIRF committees.</li>
                 <li>Acting as department Academic Curriculum Committee member.</li>
                 <li>Acting as a Project Guide for B.Sc students.</li>
-                <li>Acting as the member in Disciplinary Committee.</li>
+                <li>Acting as College Cultural Committee Co-ordinator.</li>
                 <li>Acting as mentor for NPTEL online certification.</li>
+                <li>Acting as an active member in department ISO/NAAC/NIRF committees.</li>
             </ul>
         </div>
     </section>
@@ -183,16 +290,20 @@
         </div>
     </section>
 
-    <!--<section id="resume">
+    <section id="resume">
         <div class="section-content">
             <center>
-                <h2>Resume</h2>
-                <a href="./Name list for IBM SkillsBuild.pdf" target="_blank" class="download-button">Download CV</a>
+                <h2>Certifiates</h2>
+                <a href="./webdev.pdf" target="_blank" class="download-button">View Certificate</a>
             </center>
         </div>
-    </section>-->
+    </section>
 
     <footer>
+        <div class="contact">
+            <a href="mailto:msweetykiruba@gmailcom"><i class="fa fa-envelope"></i>Mail To:msweetykiruba@gmailcom</a>
+            <a href="https://wa.me/7010613480" target="_blank"><i class="fa fa-whatsapp"></i>WhatsApp:7010613480</a>
+        </div>
         <p>&copy; 2024 Sweety Kiruba M</p>
     </footer>
 
@@ -210,6 +321,11 @@
                         top: targetElement.offsetTop,
                         behavior: 'smooth'
                     });
+                }
+
+                // Show Subjects Undertaken section when clicked
+                if (targetId === "subjects") {
+                    document.getElementById("subjects").classList.remove("hidden");
                 }
             });
         });
